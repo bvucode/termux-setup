@@ -1,17 +1,13 @@
 # termux-first-setup
 
+apt update && apt upgrade
 termux-setup-storage
-
-pkg update && pkg upgrade
-
+termux-change-repo
 pkg install x11-repo
-
-pkg install termux-x11-nightly
-
-pkg install tur-repo
-
-pkg install xfce4
-
-pkg install tigervnc
-
-pkg install firefox
+tur-repo termux-x11-nightly tigervnc xfce4
+pkg install proot-distro
+proot-distro install debian
+proot-distro login debian
+apt update && apt upgrade
+apt install dbus-x11 xfce4
+termux-x11 :0 -xstartup "dbus-launch --exit-with-session xfce4-session"
