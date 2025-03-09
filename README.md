@@ -18,6 +18,4 @@ apt update && apt upgrade
 
 apt install dbus-x11 xfce4
 
-# use debian in proot-distro
-
 termux-x11 :0 -xstartup "dbus-launch --exit-with-session xfce4-session"
