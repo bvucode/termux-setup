@@ -1,4 +1,4 @@
-# termux-first-setup
+# termux-setup
 
 ## Termux
 ```
